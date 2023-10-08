@@ -9,11 +9,16 @@ It does not fully follow all good rest api and programming best practice guideli
 ## How to Run
 
 Export env var: OPENWEATHER_API_KEY
+
 and also, OPENWEATHER_URL 
+
 with correct values,
 
+
 then cd to cmd/service from root of the repo.
+
 $ go run main.go
+
 (make sure to do go mod tidy)
 
 ## Basic Test
