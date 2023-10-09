@@ -10,6 +10,7 @@ import (
 	"github.com/gorilla/mux"
 )
 
+// Server represents a weather server interface
 type Server interface {
 	Start()
 	WeatherHandler(w http.ResponseWriter, r *http.Request)
@@ -25,6 +26,7 @@ func New(w weatherapi.WeatherApi) Server {
 	return &server{weatherApi: w}
 }
 
+// Start starts the weather server
 func (s *server) Start() {
 	router := mux.NewRouter()
 

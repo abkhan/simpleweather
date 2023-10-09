@@ -6,6 +6,8 @@ import (
 	"net/http"
 )
 
+// WeatherApi is the interface for making HTTP requests
+// to openweather api
 type WeatherApi interface {
 	GetByLatLon(lan, lon string) (*WeatherResp, error)
 }
@@ -21,6 +23,7 @@ func New(url, apiKey string) WeatherApi {
 	return &weatherApi{url: url, api: apiKey}
 }
 
+// GetByLocation makes api calls to openweather api
 func (s *weatherApi) GetByLatLon(lat, lon string) (*WeatherResp, error) {
 
 	url := s.url + "?lat=" + lat + "&lon=" + lon + "&appid=" + s.api

@@ -41,7 +41,7 @@ curl -XPOST 'localhost:8080/weather' --data '{
 The API needs bunch of improvements for it to be a good api.
 
 Some suggestions;
-
+ - Unit tests
  - Authentication
  - Access Control
  - Circuit breaker

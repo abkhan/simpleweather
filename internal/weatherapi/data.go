@@ -1,5 +1,6 @@
 package weatherapi
 
+// OpenWeather API response
 type apiResponse struct {
 	Coord      Coord     `json:"coord"`
 	Weather    []Weather `json:"weather"`

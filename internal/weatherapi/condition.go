@@ -8,6 +8,8 @@ type WeatherResp struct {
 	Temperature string `json:"temperature"`
 }
 
+// condition function takes the openweather api response and returns the
+// data for the client of this api
 func condition(body []byte) (*WeatherResp, error) {
 
 	apiresp := &apiResponse{}
